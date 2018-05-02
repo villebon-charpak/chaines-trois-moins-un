@@ -2,7 +2,8 @@
 
 Le but de cette activité est d'écrire petit programme de cryptographie qui permet de chiffrer et déchiffrer des messages en utilisant le chiffrement de César. On devrait au final arriver notamment à déchiffrer des messages comme ceux-ci :
 
-```message_secret1 = 'mhvxlvmxohvfhvdu'
+```python
+message_secret1 = 'mhvxlvmxohvfhvdu'
 message_secret2 = 'dwwdtxhdodxeh'
 message_secret3 = "Mðspjp{h{pvuz'(']v|z'ñ{lz'hyyp}ðz'ç'kðjopmmyly'jl'tlzzhnl5'Sl'jvkl'kl'Jðzhy'u.h'kðzvythpz'wv|y'sl'zljyl{'wv|y'}v|z5"
 ```
@@ -16,7 +17,8 @@ En informatique, une chaîne de caractère (*string* en anglais) est le type qui
 
 Pour définir une chaine de caractère dans Python, on peut taper une séquence de symboles délimitée au début et à la fin par des accolades ', des  guillements ", ou des triples guillemets """ :
 
-```ma_chaine1 = 'Je ne saute pas '
+```python
+ma_chaine1 = 'Je ne saute pas '
 ma_chaine2 = "de ligne !"
 ma_chaine3 = """Un texte mis entre triples guillemets peut contenir des
 sauts
@@ -33,7 +35,8 @@ On peut ne rien mettre entre les symboles d'ouverture et fermeture, on crée alo
 
 La fonction `print` permet d'afficher une chaine de caractère. Notez que la fonction passe à la ligne à chaque appel :
 
-```print("Deux appels successifs de la fonction print :")
+```python
+print("Deux appels successifs de la fonction print :")
 print(ma_chaine1) # saut de ligne
 print(ma_chaine2)
 ```
@@ -43,7 +46,8 @@ print(ma_chaine2)
 
 Sur les chaines de caractères, on dispose d'un opérateur de concaténation, noté par le symbole `+`, qui crée une chaîne composée des deux chaines accolées à la suite :
 
-```print("Avec concaténation :")
+```python
+print("Avec concaténation :")
 print(ma_chaine1 + ma_chaine2)
 ```
 
@@ -67,7 +71,8 @@ print("Tu as tapé : " + ma_chaine4)
 
 On peut convertir une variable en une chaine de caractère à l'aide de la fonction str :
 
-```quarante_deux = str(42) # '42'
+```python
+quarante_deux = str(42) # '42'
 print("la réponse est " + quarante_deux)
 ```
 
@@ -76,7 +81,8 @@ print("la réponse est " + quarante_deux)
 
 On peut manipuler une chaine de caractères de manière assez similaire à un tableau. Par exemple, on peut accéder à une partie d'une chaine de cartères comme pour un tableau à l'aide de la syntaxe `chaine[i]` :
 
-```chaine = "Bonjour !"
+```python
+chaine = "Bonjour !"
 print(chaine[0])    # B
 print(chaine[:3])   # Bon
 print(chaine[3:])   # jour !
@@ -90,13 +96,15 @@ print(chaine[-1])   # !
 
 Comme pour les tableaux, la fonction `len` retourne la longueur d'une chaine.
 
-```print(len("chaine de caractères")) # 20
+```python
+print(len("chaine de caractères")) # 20
 ```
 
 L'utilisation de la fonction `len` permet notamment le parcours d'une chaine de caractère comme une liste. Selon vous, que fait le code de la fonction suivante ?
 
 
-```def f(chaine):
+```python
+def f(chaine):
     compteur = 1
     for i in range(len(chaine)):
         if chaine[i] == ' ':
@@ -107,7 +115,8 @@ L'utilisation de la fonction `len` permet notamment le parcours d'une chaine de 
 
 La boucle `for` peut également parcourir directement les éléments de la chaine, sans utiliser les indices : 
 
-```for caractere in chaine :
+```python
+for caractere in chaine :
     # on fait des choses
     pass
     
@@ -136,7 +145,8 @@ def f(chaine):
 
 Contrairement à un tableau, il n'est pas possible de modifier la valeur d'un caractère dans une chaine par affectation (on dit qu'une chaine de caractère est **immuable**). Par exemple, le code suivant provoque une erreur :
 
-```s = "adieux canard !"
+```python
+s = "adieux canard !"
 try :
     s[0] = 'o' # va provoquer une TypeError
 except TypeError:
@@ -146,7 +156,8 @@ except TypeError:
 Pour contourner cette limitation, il peut être utile de transformer une chaine en une liste de caractères à l'aide de la fonction `list`. On peut ensuite effectuer l'opération inverse en utilisant `''.join()`. Par exemple d'effectuer cette opération (techniquement, on ne modifie pas la chaîne s originale, on la remplace en intégralité par une nouvelle chaîne): 
 
 
-```l = list(s) # on transforme s en list
+```python
+l = list(s) # on transforme s en list
 l[0] = 'o' # on change le premier élément de la liste
 s = ''.join(l) # on retransforme la liste l en une chaîne
 print(s)
@@ -174,11 +185,13 @@ Pour encoder une chaine de caractère dans la mémoire de l'ordinateur, il faut 
 
 En python, pour obtenir le numéro d'un caractère, on utilise la fonction `ord` :
 
-```print(ord('a')) # 97```
+```python
+print(ord('a')) # 97```
 
 Et réciproquement, pour obtenir un caractère à partir de son numéro, on utilise la fonction `chr` :
 
-```print(chr(97)) # a```
+```python
+print(chr(97)) # a```
 
 
 ### Question 7
