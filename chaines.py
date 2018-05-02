@@ -289,7 +289,7 @@ def cesar(message, cle):
 # tests
 # assert cesar('bonjour', 1) == 'cpokpvs'
 # assert cesar('JulesCesar', 3) == 'MxohvFhvdu'
-# assert cesar('glevfme', -4) == 'charabia'
+# assert cesar('glevefme', -4) == 'charabia'
 
 # Niveau 2 : En utilisant votre fonction chiffrement_cesar, programmer une fonction dechiffrement_cesar qui effectue l'opération inverse
 
