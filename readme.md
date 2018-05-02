@@ -5,7 +5,7 @@ Le but de cette activité est d'écrire petit programme de cryptographie qui per
 ```python
 message_secret1 = 'mhvxlvmxohvfhvdu'
 message_secret2 = 'dwwdtxhdodxeh'
-message_secret3 = "Mðspjp{h{pvuz'(']v|z'ñ{lz'hyyp}ðz'ç'kðjopmmyly'jl'tlzzhnl5'Sl'jvkl'kl'Jðzhy'u.h'kðzvythpz'wv|y'sl'zljyl{'wv|y'}v|z5"
+message_secret3 = "Mðspjp{h{pvuz'(']v|z'ñ{lz'hyyp}ðz'ç'kðjopmmyly'jl'tlzzhnl5'Sl'jvkl'kl'Jðzhy'u.h'kðzvythpz'ws|z'kl'zljyl{z'wv|y'}v|z5"
 ```
 
 Chemin faisant, nous prendrons aussi l'occasion pour voir (ou revoir) comment on manipule du texte en informatique (et plus particulièrement en python) !
