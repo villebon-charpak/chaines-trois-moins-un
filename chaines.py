@@ -135,7 +135,7 @@ def fonction(chaine):
 #####
 
 # Niveau 1 : À l'aide d'une boucle for, programmer une fonction compter_occurences(caractere, chaine) qui retourne le nombre d'occurence du caractère c dans la chaîne s
-
+message_secret1 = 'mhvxlvmxohvfhvdu'
 
 def compter_occurences(lettre, message):
     compteur = 0
@@ -148,6 +148,18 @@ print(compter_occurences('a', message_secret1))
 print(compter_occurences('e', message_secret1))
  
 # quelques tests : 
+
+s = "En ce mement, certes, t’es le chef, mets – beleve me – ce temps est bref et je prefere etre dens mes semelles qe dens tes empegnes !"
+
+def compter_occurences(lettre, message):
+    compteur = 0
+    for c in message:
+        if c == lettre:
+            compteur += 1
+    return compteur
+
+print(compter_occurences('e', s))
+print(compter_occurences('a', s))
 # assert compter_occurences('o', 'bonjour') == 2
 # s = "En ce mement, certes, t’es le chef, mets – beleve me – ce temps est bref et je prefere etre dens mes semelles qe dens tes empegnes !"
 # assert compter_occurences('e', s) == 35
