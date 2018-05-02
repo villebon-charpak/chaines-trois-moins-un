@@ -172,15 +172,15 @@ def compter_mots(chaine):
 
 # Niveau 2 : Toujours à l'aide d'une boucle for programmer une fonction compter_occurences(mot, chaine) qui retourne le nombre d'occurence du mot dans la chaine
 
-def compter_occurences(mot, chaine):
+def compter_occurences_mot(mot, chaine):
     # retourne le nombre d'occurence de mot dans la chaine
     
     pass # remplacer cette ligne par votre code
     
 
 # quelques tests
-assert compter_occurences('')
-assert compter_occurences('haha', 'hahaha') == 2
+assert compter_occurences_mot('')
+assert compter_occurences_mot('haha', 'hahaha') == 2
 
 
 
