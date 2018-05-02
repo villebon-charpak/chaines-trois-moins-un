@@ -216,7 +216,7 @@ def modifier(chaine, caractere, i):
 
 # tests
 # assert modifier("balle", "u", 1) == "bulle"
-# assert modifier("adieux canard !", "o", 0) == "odieux canard"
+# assert modifier("adieux canard !", "o", 0) == "odieux canard !"
 
 ##### 
 # 5 #
