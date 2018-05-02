@@ -105,7 +105,7 @@ print(len("chaine de caractères")) # 20
 
 # L'utilisation de la fonction len() permet notamment le parcours d'une chaine de caractère comme une liste. Selon vous, que fait le code de la fonction suivante ?
 
-def f(chaine):
+def fonction(chaine):
     compteur = 1
     for i in range(len(chaine)):
         if chaine[i] == ' ':
@@ -113,9 +113,9 @@ def f(chaine):
     return compteur
     
 # Vous pouvez tester votre hypothèse en utilisant la fonction sur des exemples :
-print("test de la fonction f :")
-n = f("ma super chaine")
-print(n)
+print("test de la fonction :")
+nombre = fonction("ma super chaine")
+print(nombre)
 
 # La boucle for peut également parcourir directement les éléments de la chaine, sans utiliser les indices : 
 
@@ -123,7 +123,7 @@ for caractere in chaine :
     # on fait des choses
     pass
     
-def f(chaine):
+def fonction(chaine):
     compteur = 1
     for caractere in chaine:
         if caractere == ' ':
@@ -190,18 +190,18 @@ assert compter_occurences('haha', 'hahaha') == 2
 
 # Contrairement à un tableau, il n'est pas possible de modifier la valeur d'un caractère dans une chaine par affectation (on dit qu'une chaine de caractère est immuable). Par exemple, le code suivant provoque une erreur :
 
-s = "adieux canard !"
+chaine = "adieux canard !"
 try :
-    s[0] = 'o' # va provoquer une TypeError
+    chaine[0] = 'o' # va provoquer une TypeError
 except TypeError:
     print("Une chaîne de caractères est un objet immuable en Python.")
     
 # Pour contourner cette limitation, il peut être utile de transformer une chaine en une liste de caractères à l'aide de la fonction list(). On peut ensuite effectuer l'opération inverse en utilisant ''.join(). Par exemple d'effectuer cette opération (techniquement, on ne modifie pas la chaîne s originale, on la remplace en intégralité par une nouvelle chaîne): 
 
-l = list(s) # on transforme s en list
-l[0] = 'o' # on change le premier élément de la liste
-s = ''.join(l) # on retransforme la liste l en une chaîne
-print(s)
+liste = list(chaine) # on transforme s en list
+liste[0] = 'o' # on change le premier élément de la liste
+chaine = ''.join(liste) # on retransforme la liste l en une chaîne
+print(chaine)
 
 ##### 
 # 4 #
