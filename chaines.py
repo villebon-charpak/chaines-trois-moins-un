@@ -17,7 +17,7 @@ message_secret2 = 'dwwdtxhdodxeh'
 message_secret3 = "Mðspjp{h{pvuz'(']v|z'ñ{lz'hyyp}ðz'ç'kðjopmmyly'jl'tlzzhnl5'Sl'jvkl'kl'Jðzhy'u.h'kðzvythpz'ws|z'kl'zljyl{z'wv|y'}v|z5"
 
 # Chemin faisant, nous prendrons aussi l'occasion pour voir (ou revoir) comment on manipule du texte en informatique (et plus particulièrement en Python) !
-
+#Camille
 # En informatique, une chaîne de caractère (string en anglais) est le type qui permet la manipulation du texte par un programme. Une chaîne de caractère est tout simplement une séquence de symboles (lettres, espaces, saut de lignes, caractères de ponctuations, symbôles divers). En somme, du texte brut (sans formattage) comme on en trouverait dans un fichier txt. Passons en revue quelques fonctionnalités de bases des chaines de caractères.
 
 ######################
