@@ -186,12 +186,14 @@ Pour encoder une chaine de caractère dans la mémoire de l'ordinateur, il faut 
 En python, pour obtenir le numéro d'un caractère, on utilise la fonction `ord` :
 
 ```python
-print(ord('a')) # 97```
+print(ord('a')) # 97
+```
 
 Et réciproquement, pour obtenir un caractère à partir de son numéro, on utilise la fonction `chr` :
 
 ```python
-print(chr(97)) # a```
+print(chr(97)) # a
+```
 
 
 ### Question 7
