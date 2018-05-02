@@ -140,11 +140,7 @@ def fonction(chaine):
     
 ### Question 3
 
-<<<<<<< Updated upstream
-*Niveau 2 :* Toujours à l'aide d'une boucle `for`, programmer une fonction `compter_occurences(mot, chaine)` qui retourne le nombre d'occurence de la chaîne `mot` à l'intérieur de la chaîne `chaine`.
-=======
 *Niveau 2 :* Toujours à l'aide d'une boucle `for`, programmer une fonction `compter_occurences_mot(mot, chaine)` qui retourne le nombre d'occurence de la chaine `mot` à l'intérieur de la chaîne `chaine`.
->>>>>>> Stashed changes
 
 
 ## Modifier une chaîne de caractères
