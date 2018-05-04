@@ -173,19 +173,31 @@ print(compter_occurences('a', s))
 
 # Niveau 1 : En utilisant votre fonction compter_occurence, programmer une fonction compter_mots(chaine) qui retourne le nombre de mot dans la chaine. On suppose ici qu'un mot est simplement une sequence de symbole sans espace (il s'agit d'un modèle très simpliste, mais on s'en contentera). La fonction doit retourner 0 pour une chaine vide.
 
-def compter_occurences(lettre, message): # programme à modifier pour retourner 0 quand c'est une chaine vide
-    compteur = 0
-    for c in message:
-        if c == lettre:
-            compteur += 1
-    return compteur
+s='gjfhkf'
 
+def compter_mot(chaine): #compter le nombre d'espaces pour déduire le nombre de mots
+    if len(chaine)==0: #si il n'a rien dans la chaine de caractère retourner 0 
+        return 0
+    else :
+        compteur = 1 
+        for caractere in chaine:
+            if caractere == ' ': # pour chaque espace donner +1
+                compteur += 1
+        return compteur # attention ce programme ne marche pas pour les cas où il y a une espaces tout devant ou tout derrière
 
-def compter_mots(chaine):
-    nombreEspaces = compter_occurences(' ',chaine)
-    return nombreEspaces + 1
+print(compter_mot(s))
 
-print(compter_mots(message_secret1))
+#def compter_occurences(lettre, message): # programme à modifier pour retourner 0 quand c'est une chaine vide
+   # compteur = 0
+    #for c in message:
+     #   if c == lettre:
+      #      compteur += 1
+    #return compteur
+#def compter_mots(chaine):
+ #   nombreEspaces = compter_occurences(' ',chaine)
+  #  return nombreEspaces + 1
+
+#print(compter_mots(message_secret1))
 
 # quelques tests :
 # assert compter_mots("") == 0
@@ -198,11 +210,20 @@ print(compter_mots(message_secret1))
 
 # Niveau 2 : Toujours à l'aide d'une boucle for programmer une fonction compter_occurences(mot, chaine) qui retourne le nombre d'occurence du mot dans la chaine
 
-def compter_occurences_mot(mot, chaine):
-    # retourne le nombre d'occurence de mot dans la chaine
-    
-    pass # remplacer cette ligne par votre code
-    
+
+mot1= 'hahahaha'
+chaine1= 'hahahahahhhhha'
+
+def compter_occurences(mot, chaine):# définir une fonction qui compte le nombre de 'mot' dans une chaine de caractère
+    compteur = 0
+    for i in range (len(chaine)-len(mot)+1): #fonction permettant à i de parcourir de 0 à n (si c'est i in range (n)) 
+                                            # len permet de donner à chaque lettre dans la chaine de caractère un chiffre correspondant
+        if chaine [i:i+len(mot)]==mot: 
+            compteur +=1
+    return compteur
+        
+
+print(compter_occurences(mot1,chaine1))
 
 # quelques tests
 # assert compter_occurences_mot('bla', 'blablabla') == 3
