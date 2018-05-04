@@ -1,25 +1,34 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May  2 11:53:11 2018
 
-@author: etudiant
-"""
-# test Q1 :
 
-s = "En ce mement, certes, t’es le chef, mets – beleve me – ce temps est bref et je prefere etre dens mes semelles qe dens tes empegnes !"
+#Q2
+s='gjfhkf'
 
-message_secret1 = ''
+def compter_mot(chaine): #compter le nombre d'espaces pour déduire le nombre de mots
+    if len(chaine)==0: #si il n'a rien dans la chaine de caractère retourner 0 
+        return 0
+    else :
+        compteur = 1 
+        for caractere in chaine:
+            if caractere == ' ': # pour chaque espace donner +1
+                compteur += 1
+        return compteur # attention ce programme ne marche pas pour les cas où il y a une espaces tout devant ou tout derrière
 
-def compter_occurences(lettre, message):
+print(compter_mot(s))
+
+#Q3
+    
+a = 'motmotutomzigmotmmmdazmot'
+
+
+def compter_occurences(mot, chaine):
     compteur = 0
-    for c in message:
-        if c == lettre:
-            compteur += 1
+    for c in chaine:
+        if c =='m':
+            compteur +=0
+        if c =='o':
+            compteur +=0
+        if c=='t':
+            compteur +=1
     return compteur
 
-
-def compter_mots(chaine):
-    nombreEspaces = compter_occurences(' ',chaine)
-    return nombreEspaces + 1
-
-print(compter_mots(message_secret1))
+print(compter_occurences('mot',a))

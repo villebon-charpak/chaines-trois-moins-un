@@ -173,11 +173,20 @@ print(compter_occurences('a', s))
 
 # Niveau 1 : En utilisant votre fonction compter_occurence, programmer une fonction compter_mots(chaine) qui retourne le nombre de mot dans la chaine. On suppose ici qu'un mot est simplement une sequence de symbole sans espace (il s'agit d'un modèle très simpliste, mais on s'en contentera). La fonction doit retourner 0 pour une chaine vide.
 
+def compter_occurences(lettre, message): # programme à modifier pour retourner 0 quand c'est une chaine vide
+    compteur = 0
+    for c in message:
+        if c == lettre:
+            compteur += 1
+    return compteur
+
+
 def compter_mots(chaine):
-    # retourne le nombres de mot dans la chaine
-    
-    pass # remplacer cette ligne par votre code
-    
+    nombreEspaces = compter_occurences(' ',chaine)
+    return nombreEspaces + 1
+
+print(compter_mots(message_secret1))
+
 # quelques tests :
 # assert compter_mots("") == 0
 # assert compter_mots("anticonstitutionnellement") == 1
