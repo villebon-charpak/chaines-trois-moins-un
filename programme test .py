@@ -1,34 +1,33 @@
 
 
-#Q2
-s='gjfhkf'
-
-def compter_mot(chaine): #compter le nombre d'espaces pour déduire le nombre de mots
-    if len(chaine)==0: #si il n'a rien dans la chaine de caractère retourner 0 
-        return 0
-    else :
-        compteur = 1 
-        for caractere in chaine:
-            if caractere == ' ': # pour chaque espace donner +1
-                compteur += 1
-        return compteur # attention ce programme ne marche pas pour les cas où il y a une espaces tout devant ou tout derrière
-
-print(compter_mot(s))
-
-#Q3
-    
-a = 'motmotutomzigmotmmmdazmot'
-
-
-def compter_occurences(mot, chaine):
+def compter_occurences(mot, chaine):# définir une fonction qui compte le nombre de 'mot' dans une chaine de caractère
     compteur = 0
-    for c in chaine:
-        if c =='m':
-            compteur +=0
-        if c =='o':
-            compteur +=0
-        if c=='t':
+    for i in range (len(chaine)-len(mot)+1): #fonction permettant à i de parcourir de 0 à n (si c'est i in range (n)) 
+                                            # len permet de donner à chaque lettre dans la chaine de caractère un chiffre correspondant
+        if chaine [i:i+len(mot)]==mot: 
             compteur +=1
     return compteur
 
-print(compter_occurences('mot',a))
+
+
+def decaler (caractere1,decalage):
+    caractere = ord(caractere1)
+    b = caractere + decalage
+    lettre_changee = chr(b)
+    return lettre_changee
+
+message1 = 'hfjhjfj'
+for i in range (len(message1)):
+    a = ord(message1)
+    print (a)
+    
+    
+    
+b = intput()
+message = 'ajhdgsfdfe'
+liste =list(message)
+for i in range (len(message)) : #(len(message)):
+    chiffre=ord(liste[i])
+    chiffre += b
+    lettre =chr(chiffre)
+    print(lettre)
