@@ -27,7 +27,9 @@ liste =list(message)
 for i in range (len(message)) : #(len(message)):
     a=ord(liste[i])
     a +=1
-    print(a)
+    print(chr(a))
+    #print(list(a))
+print(list(a))
     
 #print(ord(liste[1]))
 #print(liste)
