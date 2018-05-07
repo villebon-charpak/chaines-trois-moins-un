@@ -1,33 +1,25 @@
 
+message = input('message secret : ') # entrer le message 
 
-def compter_occurences(mot, chaine):# définir une fonction qui compte le nombre de 'mot' dans une chaine de caractère
+def compter_occurences(lettre1, message): # compter le nombre de fois ou apparait la lettre
     compteur = 0
-    for i in range (len(chaine)-len(mot)+1): #fonction permettant à i de parcourir de 0 à n (si c'est i in range (n)) 
-                                            # len permet de donner à chaque lettre dans la chaine de caractère un chiffre correspondant
-        if chaine [i:i+len(mot)]==mot: 
-            compteur +=1
+    for lettre in message: 
+        if lettre == lettre1:
+            compteur += 1
     return compteur
 
+liste = [] # definir une variable contenant la liste
 
+for i in range (97,123): # pour i allant de a à z
+    liste.append(compter_occurences(chr(i),message)) # faire la liste du nombre d'occurence de chaque lettre
+    
+a = 0
 
-def decaler (caractere1,decalage):
-    caractere = ord(caractere1)
-    b = caractere + decalage
-    lettre_changee = chr(b)
-    return lettre_changee
+for i in range (1,len(liste)) :
+    if liste[a] < liste[i] :
+        a = i
 
-message1 = 'hfjhjfj'
-for i in range (len(message1)):
-    a = ord(message1)
-    print (a)
-    
-    
-    
-b = intput()
-message = 'ajhdgsfdfe'
-liste =list(message)
-for i in range (len(message)) : #(len(message)):
-    chiffre=ord(liste[i])
-    chiffre += b
-    lettre =chr(chiffre)
-    print(lettre)
+b = chr(a+87)
+
+print (b)
+
