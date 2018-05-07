@@ -10,12 +10,16 @@ Created on Mon May  7 15:09:46 2018
 message = input('message secret : ') #demande un message
 cle=input('clé (chiffre entre -26 et 26) : ') #demande la cle
 
-
+tableau=[] # on créé un tableau 
 
 for i in range (len(message)) : #len(message) = longueur du message 
     lettre_cle=ord(message[i]) # on demande la notation ASCII de chaque lettre
     lettre_cle +=int(cle) # on incrémente la clé
-    print(chr(lettre_cle)) # on repasse de la notation ascii en lettre
+    lettre_cle=chr(lettre_cle) # on repasse de la notation ascii en lettre
+    tableau.append(lettre_cle) # on incrémente la lettre dans le tableau
+    
+phrase_modifiée = "".join(tableau)
+print(phrase_modifiée)
     
 #le message s'affiche à la verticale alors qu'il faut qu'il soit a l'horizontale
 #attention aux espaces (il faut les laisser)
