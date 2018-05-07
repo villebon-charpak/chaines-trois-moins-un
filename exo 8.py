@@ -21,13 +21,16 @@ def substituer(chaine_initiale,position,charactere) :
 print(substituer(chaine_initiale,position,input('charactere')))
 """
 
+
 message = 'ajhdgsfdfe'
 liste =list(message)
 #liste="".join(liste)
 for i in range (len(message)) : #(len(message)):
     a=ord(liste[i])
     a +=1
-    print(a)
+    print(chr(a))
+    print(list(a))
+
     
 #print(ord(liste[1]))
 #print(liste)
