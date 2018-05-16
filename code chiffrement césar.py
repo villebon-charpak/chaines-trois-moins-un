@@ -30,8 +30,10 @@ if a==1:
     print('merci pour votre participation, votre message nous aidera a améliorer notre intelligence artificielle')
 elif a==0:
     print('nous allons recommencer ...')
+    
 else :
-    print('nous avons affaire a un génie ...')
+    print('nous avons affaire à un génie ...')
+
 
 
 
