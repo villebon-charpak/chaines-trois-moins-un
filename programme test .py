@@ -1,34 +1,25 @@
 
+message = input('message secret : ') # entrer le message 
 
-#Q2
-s='gjfhkf'
-
-def compter_mot(chaine): #compter le nombre d'espaces pour déduire le nombre de mots
-    if len(chaine)==0: #si il n'a rien dans la chaine de caractère retourner 0 
-        return 0
-    else :
-        compteur = 1 
-        for caractere in chaine:
-            if caractere == ' ': # pour chaque espace donner +1
-                compteur += 1
-        return compteur # attention ce programme ne marche pas pour les cas où il y a une espaces tout devant ou tout derrière
-
-print(compter_mot(s))
-
-#Q3
-    
-a = 'motmotutomzigmotmmmdazmot'
-
-
-def compter_occurences(mot, chaine):
+def compter_occurences(lettre1, message): # compter le nombre de fois ou apparait la lettre
     compteur = 0
-    for c in chaine:
-        if c =='m':
-            compteur +=0
-        if c =='o':
-            compteur +=0
-        if c=='t':
-            compteur +=1
+    for lettre in message: 
+        if lettre == lettre1:
+            compteur += 1
     return compteur
 
-print(compter_occurences('mot',a))
+liste = [] # definir une variable contenant la liste
+
+for i in range (97,123): # pour i allant de a à z
+    liste.append(compter_occurences(chr(i),message)) # faire la liste du nombre d'occurence de chaque lettre
+    
+a = 0
+
+for i in range (1,len(liste)) :
+    if liste[a] < liste[i] :
+        a = i
+
+b = chr(a+87)
+
+print (b)
+
