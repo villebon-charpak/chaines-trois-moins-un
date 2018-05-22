@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon May  7 15:09:46 2018
-
-@author: etudiant
-"""
 
 compteur_de_boucle=0
 message = input('message secret : ') #demande un message
@@ -13,16 +8,16 @@ def compter_occurences(lettre1, message): # compter le nombre de fois ou apparai
     for lettre in message: 
         if lettre == lettre1:
             compteur += 1
-    return compteur
+    return compteur 
 
 
 
-liste = [] # definir une variable contenant la liste
+liste = [] # definit une la liste nommée très judicieusement liste
 
 for i in range (0,127):# pour i allant de a à z en chiffre, chr fait passer de chiffre en lettre
     liste.append(compter_occurences(chr(i),message)) # faire la liste du nombre d'occurence de chaque lettre
 
-tableau_occurence = [] 
+tableau_occurence = [] # pour classer les lettres dans l'ordre décroissant en fonction de leur occurance
 
 while liste != [0]*127: # tant que dans la liste il n'y a que des 0, répeter la boucle
     a = liste[0]
@@ -30,27 +25,28 @@ while liste != [0]*127: # tant que dans la liste il n'y a que des 0, répeter la
     for i in range (0,len(liste)) : # permet de trouver la lettre le plus repétée
         if a < liste[i] :
             a = liste[i] # nombre de fois ou la lettre est repétée
-            indice = i # chiffre correspondant à la lettre        
+            indice = i # chiffre ASCII correspondant à la lettre        
     tableau_occurence.append(indice) # apporter cet indice dans une nouvelle liste 
     liste[indice] = 0 # remplacer l'occurence à l'indice i par 0
 
-print(tableau_occurence)
-print (indice)
-
-cle = 32 - tableau_occurence[0] ##
-print (cle)
-
+cle = 32 - tableau_occurence[0] #on trouve le décalage : 32 est le numéro qui correspond à l'espace qu'on soustrait par le numéro du caractère codé qui aparaît le plus. 
 
 tableau=[] # on créé un tableau 
 
 for j in range (len(message)) : #len(message) = longueur du message 
     lettre_cle=ord(message[j]) # on demande la notation ASCII de chaque lettre
     lettre_cle +=int(cle) # on incrémente la clé
-    lettre_cle=chr(lettre_cle) # on repasse de la notation ascii en lettre
-    tableau.append(lettre_cle) # on incrémente la lettre dans le tableau
+    if cle < -32 :                  
+        lettre_cle -=int(cle)
+        print("pas possible") #lorsqu'on soustrait par 32 le résultat est négatif ce qui ne correspond à aucun caractère dans la table ascii
+        lettre_cle=chr(lettre_cle) # on repasse de la notation ascii en lettre
+        tableau.append(lettre_cle) # on incrémente la lettre dans le tableau
+    else :
+        lettre_cle=chr(lettre_cle) # on repasse de la notation ascii en lettre
+        tableau.append(lettre_cle) # on incrémente la lettre dans le tableau
     
-phrase_modifiée = "".join(tableau)
-print('voici le message déchiffré : ',phrase_modifiée)
+phrase_modifiée = "".join(tableau) # tous les mots sont regroupés et un espace les sépare
+print('voici le message déchiffré : ',phrase_modifiée) # on imprime la phrase décodée 
     
 a = 0
 
